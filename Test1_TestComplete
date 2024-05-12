@@ -1,0 +1,18 @@
+function Test1()
+{
+  Browsers.Item(btEdge).Run("edge://newtab/");
+
+  Aliases.browser.BrowserWindow2.Maximize();
+
+  Aliases.browser.pageNewtab.Wait();
+ 
+  Aliases.browser.ToUrl("https://www.bing.com/search?pglt=41&q=facultatea+de+matematica+si+informatica&cvid=7fa2038797814dd496a027c1f44ec645&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARAAGEAyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxAAGEAyBggIEAAYQNIBCDkxNjlqMGoxqAIIsAIB&FORM=ANSPA1&PC=U531");
+
+  Aliases.browser.pageSearch.Wait();
+
+  Aliases.browser.pageSearch.textnodeBResults.textnodeFacultateaDeMatematicI.textnodeFacultateaDeMatematicI2.linkFacultateaDeMatematicI.Click();
+  
+  Delay(2500);
+
+  Aliases.browser.BrowserWindow2.Close();
+}
