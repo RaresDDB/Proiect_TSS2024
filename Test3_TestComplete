@@ -1,0 +1,23 @@
+function Test3()
+{
+  Browsers.Item(btEdge).Run("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", 10);
+
+  Browsers.Item(btEdge).Navigate("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+
+  Aliases.browser.BrowserWindow2.Maximize();
+
+  Aliases.browser.pageOrangehrm.formUsername.textboxUsername.Click();
+
+  Aliases.browser.pageOrangehrm.formUsername.textboxUsername.SetText("Admin");
+  Delay(1500);
+
+  Aliases.browser.pageOrangehrm.formUsername.passwordboxPassword.Click();
+
+  Aliases.browser.pageOrangehrm.formUsername.passwordboxPassword.SetText(Project.Variables.Password1);
+  Delay(1500);
+
+  Aliases.browser.pageOrangehrm.formUsername.buttonLogin.ClickButton();
+  Delay(1500);
+  
+  Aliases.browser.BrowserWindow2.Close();
+}
