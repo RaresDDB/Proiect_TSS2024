@@ -1,0 +1,17 @@
+function Test2() {
+    var browser = Browsers.Item(btEdge).Run("https://fmi.unibuc.ro", 10);
+
+    Delay(2500); 
+
+    var page = Sys.Browser("edge").Page("*");
+
+    var element = page.FindChildByXPath("//a[contains(@href, 'fmi')]", 10000); 
+
+    if (element != null && element.Visible) {
+        Log.Message("Elementul este afișat pe pagină.");
+    } else {
+        Log.Message("Elementul nu este afișat pe pagină sau nu a fost găsit.");
+    }
+
+    Sys.Browser("edge").Close();
+}
